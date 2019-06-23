@@ -30,7 +30,7 @@ print("----------------------------------")
 for candidate in candidate_dict:
     print(candidate + ": " + str(round(candidate_dict[candidate]/total_votes * 100,2)) + "% (" + str(candidate_dict[candidate]) + ")")
 print("----------------------------------")
-print(f"Winner: {str(max(candidate_dict))}")
+print(f"Winner: {(list(candidate_dict.keys())[0])}")
 print("----------------------------------")
 
 with open("pypoll.txt", "w", newline='') as f:
@@ -42,5 +42,5 @@ with open("pypoll.txt", "w", newline='') as f:
         f.write(candidate + ": " + str(round(candidate_dict[candidate] / total_votes * 100, 2)) + "% (" + str(
             candidate_dict[candidate]) + ")\n")
     f.write("----------------------------------\n")
-    f.write(f"Winner: {str(max(candidate_dict))}\n")
+    f.write(f"Winner: {(list(candidate_dict.keys())[0])}\n")
     f.write("----------------------------------")
