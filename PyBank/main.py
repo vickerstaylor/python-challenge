@@ -37,6 +37,14 @@ total_monthly_avg = sum(avg_change_array) / len(avg_change_array)
 var1, var2 = increase_in_profits
 var3, var4 = decrease_in_profits
 
+print(f"Financial Analysis")
+print(f"----------------------------")
+print(f"Total Months: {str(total_months)}")
+print(f"Total: ${total}")
+print(f"Average Change: ${round(total_monthly_avg, 2)}")
+print(f"Greatest Increase in Profits: {var1} (${var2})")
+print(f"Greatest Decrease in Profits: {var3} (${var4})")
+
 with open("pybank.txt", "w", newline='') as f:
     f.write(f"Financial Analysis\n")
     f.write(f"----------------------------\n")
